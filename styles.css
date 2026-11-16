@@ -87,6 +87,49 @@ body {
   }
 }
 
+.lang-bar {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+}
+
+.lang-toggle {
+  display: inline-flex;
+  padding: 0.2rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(19, 21, 26, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.lang-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  min-width: 2.4rem;
+  min-height: 1.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    color 0.2s var(--ease),
+    background 0.2s var(--ease);
+}
+
+.lang-btn:hover {
+  color: var(--text);
+}
+
+.lang-btn.is-active {
+  color: #1a1510;
+  background: linear-gradient(135deg, var(--accent-hover), var(--accent));
+}
+
 .stage {
   position: relative;
   z-index: 1;
@@ -96,7 +139,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2.5rem 0 2rem;
+  padding: 3.25rem 0 2rem;
   animation: rise 0.9s var(--ease) both;
 }
 
